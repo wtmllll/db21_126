@@ -48,7 +48,6 @@ class NessController {
     public function updateN() {
         echo "upN1";
         $pid = $_GET['Patient_id'];
-        $pids = $_GET['Patientid'];
         $smask = $_GET['surgical_mask'];
         $garb = $_GET['garbage'];
         $med = $_GET['medicine'];
@@ -56,22 +55,20 @@ class NessController {
         $therm = $_GET['thermometer'];
         $pulse = $_GET['PulseOximeter'];
         
-        NessModel::update($pid,$pids, $smask, $garb, $med, $gel, $therm, $pulse);
+        NessModel::update($pid, $smask, $garb, $med, $gel, $therm, $pulse);
         NessController::index();
     }
 
-    public function deleteConfirm() {
-        $PDid = $_GET['PDid'];
-        $minQty=$_GET['minQty'];
-        $ProductPrice=ProductPrice::get($PDid,$minQty);
-        require_once('./views/productprice/deleteConfirm.php');
+    public function deleteConfirmN() {
+        $pid = $_GET['Patient_id'];
+        $ness_List=NessModel::get($pid);
+        require_once('./views/Necessary/deleteConfirm.php');
     }
 
-    public function delete() {
-        $PDid = $_GET['PDid'];
-        $MinQty=$_GET['MinQty'];
-        ProductPrice::delete($PDid, $MinQty);
-        ProductController::index();
+    public function deleteN() {
+        $pid = $_GET['Patient_id'];
+        NessModel::delete($PDid);
+        NessController::index();
 
     }
     
