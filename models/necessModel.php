@@ -13,7 +13,7 @@ class NecessModel{
     public $county_Home;
     public $province_Home;
 
-    public function __construct ($pid,$smask,$garb,$med,$gel,$therm,$pulse)
+    public function __construct ($pid,$smask,$garb,$med,$gel,$therm,$pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home)
     {
         $this->pid = $pid;
         $this->smask = $smask;
