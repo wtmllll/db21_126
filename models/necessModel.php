@@ -47,8 +47,8 @@ class NecessModel{
             $LastnameP = $my_row[LastnameP]; 
             $address_Home = $my_row[address_Home];
             $county_Home = $my_row[county_Home];
-            $province_Home = $myrow[province_Home];
-            $necessList[] = new NessModel($pid, $smask, $garb, $med, $gel, $therm, $pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
+            $province_Home = $my_row[province_Home];
+            $necessList[] = new NecessModel($pid, $smask, $garb, $med, $gel, $therm, $pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
         }
         require("connection_close.php");
         
