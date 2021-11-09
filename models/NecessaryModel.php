@@ -15,18 +15,18 @@ class NessModel{
 
     public function __construct ($pid,$smask,$garb,$med,$gel,$therm,$pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home)
     {
-        $this->$pid = $pid;
-        $this->$smask = $smask;
-        $this->$garb = $garb;
-        $this->$med = $med;
-        $this->$gel = $gel;
-        $this->$therm = $therm;
-        $this->$pulse = $pulse;
-        $this->$NamePeople = $NamePeople;
+        $this->pid = $pid;
+        $this->smask = $smask;
+        $this->garb = $garb;
+        $this->med = $med;
+        $this->gel = $gel;
+        $this->therm = $therm;
+        $this->pulse = $pulse;
+        $this->NamePeople = $NamePeople;
         $this->LastnameP = $LastnameP; 
-        $this->$address_Home = $address_Home;
-        $this->$county_Home = $county_Home;
-        $this->$province_Home = $province_Home;
+        $this->address_Home = $address_Home;
+        $this->county_Home = $county_Home;
+        $this->province_Home = $province_Home;
     }
 
     public static function get($pid)
