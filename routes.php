@@ -1,6 +1,6 @@
 <?php
 $controllers = array('pages'=>['home','error'],
-                    'Necessary'=>['index','newNecessary','addNecessary','search','updateFormN','updateN']);
+                    'Necessary'=>['index','newNecessary','addNecessary','search','updateFormN','updateN','deleteConfirmN','deleteN']);
 function call($controller,$action) {
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
