@@ -128,20 +128,20 @@ class NessModel{
         return "add success $result rows";
     }
 
-    public static function update($pid,$pids, $smask, $garb, $med, $gel, $therm, $pulse) {
+    public static function update($pid,$smask, $garb, $med, $gel, $therm, $pulse) {
         require("connection_connect.php");
-        $sql = "UPDATE `Necessary` SET Patient_id = '$pid',`surgical_mask`=$smask,`garbage`=$garb,`medicine`=$med,
+        $sql = "UPDATE `Necessary` SET `surgical_mask`=$smask,`garbage`=$garb,`medicine`=$med,
         `gel_alcohol`=$gel,`thermometer`=$therm,`PulseOximeter`=$pulse
-        WHERE Patient_id = '$pids'";
+        WHERE Patient_id = '$pid'";
         $result = $conn->query($sql);
         require("connection_close.php");
 
         return "update success $result row";
     }
 
-    public static function delete($PDid, $minQty) {
+    public static function delete($PDid) {
         require("connection_connect.php");
-        $sql = "DELETE FROM product_price WHERE PDid = '$PDid' AND minQty = $minQty";
+        $sql = "DELETE FROM Necessary WHERE Patient_id = '$pid";
         $result = $conn->query($sql);
         require("connection_close.php");
 
