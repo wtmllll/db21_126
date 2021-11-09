@@ -35,8 +35,8 @@ new Necessary<a href="?controller=Necessary&action=newNecessary"> click! </a><br
         <td>$ness->gel</td> 
         <td>$ness->therm</td> 
         <td>$ness->pulse</td>
-        <td><a href=?controller=Necessary&action=updateFormN&pid=$ness->pid>update</td> 
-        <td><a href=?controller=Necessary&action=deleteConfirm&pid=$ness->pid>delete</td></tr>";
+        <td><a href=?controller=Necessary&action=updateFormN&Patient_id=$ness->pid>update</td> 
+        <td><a href=?controller=Necessary&action=deleteConfirmN&Patient_id=$ness->pid>delete</td></tr>";
     }
     echo "</table>";
     ?>
