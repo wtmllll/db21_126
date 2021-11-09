@@ -2,9 +2,9 @@
     <label> Patient_id <select name="Patient_id">
         <?php foreach($Home_List as $h) {
             echo "<option value= $h->patient_id"; 
-            if($h->patient_id==$ness_List->patient_id)  
+            if($h->patient_id==$ness_List->Patient_id)  
             {echo " selected='selected'";}
-            echo ">$h->patient_id</option>";
+            echo "> $h->patient_id</option>";
         }
             ?>
     </select></label><br>
@@ -31,7 +31,7 @@
 <label> PulseOximeter <input type="text" name="PulseOximeter" 
         value="<?php echo $ness_List->Pulse;?>"/></label><br>
 <input type="hidden" name="controller" value="Necessary"/>
-<input type="hidden" name="Patientid" value="<?php echo $ness_List->pid;?>"/>
+<input type="hidden" name="Patient_id" value="<?php echo $ness_List->pid;?>"/>
 <button type="submit" name="action" value="index">Back</button>
 <button type="submit" name="action" value="updateN">update</button>
 </form>
