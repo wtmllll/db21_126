@@ -12,12 +12,12 @@ new Necessary<a href="?controller=Necessary&action=newNecessary"> click! </a><br
     <td> address_Home </td>
     <td> country_Home </td>
     <td> province_Home </td>
-    <td> surgical_mask </td>
-    <td> garbage </td>
-    <td> medicine </td>
-    <td> gel_alcohol </td>
-    <td> thermometer </td>
-    <td> PulseOximeter </td>
+    <td> surgical_mask(set) </td>
+    <td> garbage(set) </td>
+    <td> medicine(set) </td>
+    <td> gel_alcohol(piece) </td>
+    <td> thermometer(piece) </td>
+    <td> PulseOximeter(piece) </td>
     <td>update</td> 
     <td>delete</td></tr>
 
