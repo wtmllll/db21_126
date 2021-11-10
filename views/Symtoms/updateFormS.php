@@ -1,4 +1,4 @@
-<form method="get" action="">
+<br><form method="get" action="">
 <label>Date<input type="date" name="Date"
         value="<?php echo $symptom_list->date;?>"/></label><br>
 <label> NamePeople <input type="text" name="NamePeople" 
@@ -19,7 +19,7 @@
 <label>Symptoms<input type="text" name="Symptom"
         value="<?php echo $symptom_list->symptom;?>"/> </label><br>
 
-<input type="hidden" name="controller" value="Symptoms"/>
+<br><input type="hidden" name="controller" value="Symptoms"/>
 <input type="hidden" name="Patient_id" value="<?php echo $symptom_list->pid;?>"/>
 <button type="submit" name="action" value="index">Back</button>
 <button type="submit" name="action" value="updateS"> update </button>
