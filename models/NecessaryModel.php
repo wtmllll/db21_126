@@ -30,7 +30,7 @@ class NessModel{
     }
 
     public static function get($pid)
-    {   echo "get";
+    {   
         require("connection_connect.php");
         $sql = "SELECT n.Patient_id, pe.NamePeople, pe.LastnameP, h.address_Home, h.county_Home, h.province_Home, n.surgical_mask, n.garbage, n.medicine, n.gel_alcohol, n.thermometer, n.PulseOximeter 
         FROM `Necessary` AS n NATURAL JOIN Homeisolation AS h NATURAL JOIN Patient NATURAL JOIN People AS pe
@@ -49,10 +49,10 @@ class NessModel{
         $address_Home = $my_row[address_Home];
         $county_Home = $my_row[county_Home];
         $province_Home = $my_row[province_Home];
-        echo $pid;
+        
         require("connection_close.php");
 
-        return new NessModel($pid,$smask,$garb,$med,$gel,$therm,$pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
+        return new Nessmodel($pid,$smask,$garb,$med,$gel,$therm,$pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
     }
 
     public static function getAll()
@@ -76,8 +76,7 @@ class NessModel{
             $address_Home = $my_row[address_Home];
             $county_Home = $my_row[county_Home];
             $province_Home = $my_row[province_Home];
-            $nessList[] = new NessModel($pid, $smask, $garb, $med, $gel, $therm, $pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
-            echo $pid;        
+            $nessList[] = new NessModel($pid, $smask, $garb, $med, $gel, $therm, $pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);        
         }
         require("connection_close.php");
         
@@ -85,17 +84,15 @@ class NessModel{
     }
 
     public static function search($key)
-    {   echo "serchmo";
-        echo $key;
+    {   
         $ness_List = [];
         require("connection_connect.php");
-        $sql = "SELECT n.Patient_id, pe.NamePeople, pe.LastnameP, h.address_Home, h.county_Home, h.province_Home, n.surgical_mask, 
-        n.garbage, n.medicine, n.gel_alcohol, n.thermometer, n.PulseOximeter FROM Necessary AS n NATURAL JOIN Homeisolation AS h 
-        NATURAL JOIN Patient NATURAL JOIN People AS pe WHERE (n.Patient_id LIKE '%$key%' OR pe.NamePeople LIKE '%$key%' 
-        OR pe.LastnameP LIKE '%$key%' OR h.address_Home LIKE '%$key%' OR h.county_Home LIKE '%$key%' OR h.province_Home LIKE '%$key%'
-        n.surgical_mask LIKE '%$key%' OR n.garbage LIKE '%$key%' OR n.medicine LIKE '%$key%' OR n.gel_alcohol LIKE '%$key%'
-        OR n.thermometer LIKE '%$key%' OR n.PulseOximeter LIKE '%$key%')";
-        echo $key;
+        $sql = "SELECT Patient_id, NamePeople, LastnameP, address_Home, county_Home, province_Home, surgical_mask, 
+        garbage, medicine, gel_alcohol, thermometer, PulseOximeter FROM Necessary  NATURAL JOIN Homeisolation 
+        NATURAL JOIN Patient NATURAL JOIN People WHERE (Patient_id LIKE '%$key%' OR NamePeople LIKE '%$key%' 
+       OR LastnameP LIKE '%$key%' OR address_Home LIKE '%$key%' OR county_Home LIKE '%$key%' OR province_Home LIKE '%$key%'
+       OR surgical_mask LIKE '%$key%' OR garbage LIKE '%$key%' OR medicine LIKE '%$key%' OR gel_alcohol LIKE '%$key%'
+        OR thermometer LIKE '%$key%' OR PulseOximeter LIKE '%$key%' )";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
@@ -112,10 +109,10 @@ class NessModel{
             $county_Home = $my_row[county_Home];
             $province_Home = $my_row[province_Home];
             $ness_List[] = new NessModel($pid, $smask, $garb, $med, $gel, $therm, $pulse,$NamePeople,$LastnameP,$address_Home,$county_Home,$province_Home);
-            echo $pid;        
+                    
         }
         require("connection_close.php");
-        echo $ness_List[0];
+         
         return $ness_List;
     }
     public static function Add($pid, $smask, $garb, $med, $gel, $therm, $pulse) {
@@ -124,7 +121,7 @@ class NessModel{
         VALUES ('$pid',$smask,$garb,$med,$gel,$therm,$pulse)";
         $result = $conn->query($sql);
         require("connection_close.php");
-        echo $pid;
+        
         return "add success $result rows";
     }
 
@@ -139,9 +136,9 @@ class NessModel{
         return "update success $result row";
     }
 
-    public static function delete($PDid) {
+    public static function delete($pid) {
         require("connection_connect.php");
-        $sql = "DELETE FROM Necessary WHERE Patient_id = '$pid";
+        $sql = "DELETE FROM `Necessary` WHERE Patient_id = '$pid'";
         $result = $conn->query($sql);
         require("connection_close.php");
 
