@@ -1,24 +1,26 @@
+<br><p> ยินดีต้อนรับ!!! </p><br>
 
-<br>
+<a href="?controller=pages&action=Nindex">[ตารางสิ่งของจำเป็นสำหรับ Home Isolation]</a><br>
+<a href="?controller=pages&action=Sindex">[ตารางข้อมูลจากการ Video Call]</a><br>
 <br><form method="get" action="">
     <input type="text" name="key">
     <input type="hidden" name="controller" value="pages">
     <button type="submit" name="action" value="searchN">
-    search</button>
+    ค้นหา</button>
 </form>
 <br><table border=2>
-    <tr> <td> Patient_id </td>
-    <td> NamePeople </td>
-    <td> LastnameP </td>
-    <td> address_Home </td>
-    <td> country_Home </td>
-    <td> province_Home </td>
-    <td> surgical_mask </td>
-    <td> garbage </td>
-    <td> medicine </td>
-    <td> gel_alcohol </td>
-    <td> thermometer </td>
-    <td> PulseOximeter </td></tr>
+    <tr> <td> รหัสผู้ป่วย </td>
+    <td> ชื่อ </td>
+    <td> นามสกุล </td>
+    <td> ที่อยู่ </td>
+    <td> อำเภอ </td>
+    <td> จังหวัด </td>
+    <td> หน้ากากอนามัย(ชุด) </td>
+    <td> ถุงขยะติดเชื้อ(ชุด) </td>
+    <td> ยารักษา(ชุด) </td>
+    <td> เจลแอลกอฮอล์(ชุด) </td>
+    <td> ปรอทวัดไข้(ชิ้น) </td>
+    <td> เครื่องวัดค่าออกซิเจนปลายนิ้ว(ชิ้น) </td></tr>
 
     <?php foreach($ness_List as $ness)
     {
@@ -37,8 +39,4 @@
     }
     echo "</table>";
     ?>
-<form>
-    <input type="hidden" name="controller" value="pages"/><br>
-    <button type="submit" name="action" value="home">Back</button>
-</form>
-    
+
