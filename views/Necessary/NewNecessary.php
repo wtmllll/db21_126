@@ -1,4 +1,4 @@
-<form method="get"action="">
+<br><form method="get"action="">
     <label> Patient_id<select name="Patient_id">
         <option value="">choose</option>
         <?php foreach($Home_List as $h) {
