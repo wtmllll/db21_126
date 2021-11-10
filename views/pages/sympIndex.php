@@ -1,3 +1,10 @@
+<br>
+<br><form method="get" action="">
+    <input type="text" name="key">
+    <input type="hidden" name="controller" value="pages">
+    <button type="submit" name="action" value="searchS">
+    search</button>
+</form>
 <br><table border=2>
 <tr> <td>Date</td>
 <td>Patient_id</td>
