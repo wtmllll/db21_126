@@ -2,7 +2,7 @@
     <label> Patient_id <select name="Patient_id">
         <?php foreach($Home_List as $h) {
             echo "<option value= $h->patient_id"; 
-            if($h->patient_id==$ness_List->Patient_id)  
+            if($h->patient_id==$ness_List->pid)  
             {echo " selected='selected'";}
             echo "> $h->patient_id</option>";
         }
