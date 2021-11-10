@@ -1,11 +1,11 @@
-<form method="get" action="">
+<br><form method="get" action="">
     <input type="text" name="key">
-    <input type="hidden" name="controller" value="Necessary"/>
+    <input type="hidden" name="controller" value="Necessary">
     <button type="submit" name="action" value="search">
     search</button>
 </form>
 new Necessary<a href="?controller=Necessary&action=newNecessary"> click! </a><br>
-<table border=2>
+<br><table border=2>
     <tr> <td> Patient_id </td>
     <td> NamePeople </td>
     <td> LastnameP </td>
