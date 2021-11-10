@@ -12,7 +12,6 @@ function call($controller,$action) {
                         require_once("models/SymptomModel.php");
                         break;
         case "Necessary":   require_once("models/NecessaryModel.php");
-                            require_once("models/necessModel.php");
                             require_once("models/HomeIsolationModel.php");
                             $controller = new NessController();
                             break;
