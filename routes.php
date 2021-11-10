@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error','Nindex','Sindex'],
+$controllers = array('pages'=>['home','error','Nindex','Sindex','searchN','searchS'],
                     'Necessary'=>['index','newNecessary','addNecessary','search','updateFormN','updateN','deleteConfirmN','deleteN'],
                     'Symptoms'=>['index','newSymptoms','addSymptoms','search','updateFormS','updateS','deleteConfirmS','deleteS']
                     );
