@@ -29,7 +29,7 @@
 <label> thermometer <input type="text" name="thermometer" 
         value="<?php echo $ness_List->therm;?>"/></label><br>
 <label> PulseOximeter <input type="text" name="PulseOximeter" 
-        value="<?php echo $ness_List->Pulse;?>"/></label><br>
+        value="<?php echo $ness_List->pulse;?>"/></label><br>
 <input type="hidden" name="controller" value="Necessary"/>
 <input type="hidden" name="Patient_id" value="<?php echo $ness_List->pid;?>"/>
 <button type="submit" name="action" value="index">Back</button>
