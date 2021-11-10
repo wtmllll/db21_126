@@ -4,5 +4,5 @@
     <input type="hidden" name="controller" value="Necessary"/>
     <input type="hidden" name="Patient_id" value="<?php echo $ness_List->pid;?>"/>
     <button type="submit" name="action" value="index"> Back </button>
-    <button type="submit" name="action" value="delete"> Delete </button>
+    <button type="submit" name="action" value="deleteN"> Yes </button>
 </form>
